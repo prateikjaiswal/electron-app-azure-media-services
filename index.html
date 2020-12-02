@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Steaming Video On Demand Demo</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="inputUrl" placeholder="Enterl .mp4 url">
+    <button type="button" id="sendBtn">Start</button>
+    </div>
+    <div
+      style="
+        max-width: 70%;
+        border: 1px solid black !important;
+        background-color: #4caf50 !important;
+      "
+    >
+      <p id="creating-encoding-transform"></p>
+      <p id="getting-job"></p>
+      <p id="creating-output"></p>
+      <p id="submitting-job"></p>
+      <p id="waiting"></p>
+      <p id="processing"></p>
+      <p id="Finished"></p>
+      <p id="url2"></p>
+      <p id="deleting"></p>
+      <p id="done"></p>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
